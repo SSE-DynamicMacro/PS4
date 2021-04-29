@@ -35,7 +35,7 @@ p.labor = [l_ss;l];
 k = X(:,3);
 p.capital = [k_ss;k];
 
-y = theta * A1 ^ (1 - theta) * k .^ (theta - 1) .* l .^ (1 - theta);
+y = k .^ theta .* (A1*l) .^ (1-theta);
 p.output = [y_ss;y];
 
 %%
